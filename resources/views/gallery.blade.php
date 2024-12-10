@@ -1,14 +1,7 @@
 @extends('layouts.gallery')
 @section('content')
 
-<!-- Preloader -->
-<div id="preloader">
-    <div class="spinner-border text-primary" id="loader-contact" role="status">
-        <span class="visually-hidden">Loading...</span>
-    </div>
-</div>
-
-<div class=" container-fluid py-4">
+<div class="container-fluid py-4">
     <div class="row" style="overflow-x: auto;">
         <div class="col" style="overflow-x: auto;">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="overflow-x: auto; white-space: nowrap; display: flex; width:max-content">

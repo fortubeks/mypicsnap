@@ -15,7 +15,7 @@
         align-items: center;
         gap: 15px;
         bottom: 20px;
-        position: absolute;
+        position: sticky;
         width: 100%;
     }
 </style>

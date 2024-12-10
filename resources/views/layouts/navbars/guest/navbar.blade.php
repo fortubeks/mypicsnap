@@ -6,27 +6,23 @@
         font-family: sans-serif;
         font-optical-sizing: auto;
     }
-</style>
-<div class="container position-sticky z-index-sticky top-0">
-    <div class="row">
-        <div class="card shadow-lg">
-            <div class="card-body">
-                <div class="row gx-4">
-                    <div class="col-8 my-sm-auto ms-sm-auto me-sm-0 ">
-                        <a class="" href="{{route('home')}}">
-                            <h5 class="mb-1">
-                                My Event Cam
-                            </h5>
-                        </a>
-                    </div>
 
-                    <div class="col-4 my-sm-auto ms-sm-auto me-sm-0 text-end">
-                        <div class="nav-wrapper position-relative end-0 text-right">
-                            <!-- <button class="btn btn-link btn-sm ms-auto">Create your event</button> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+    body .theme_coloredfont,
+    body a.theme_coloredfont,
+    body a.theme_coloredfont:link,
+    body a.theme_coloredfont:visited,
+    body li a.active.theme_coloredfont,
+    .color_2_dark,
+    .color_2_dark a {
+        color: #948127;
+    }
+</style>
+<div id="mobileHeader" class="container z-index-sticky top-0">
+    <div>
+        <div class="site-title my-3">
+            <p class="coverDateT2 theme_coloredfont">December 28, 2024</p>
+            <h1 class="titleT2 theme_coloredfont"><span>Favour and Fortune</span></h1>
         </div>
     </div>
+
 </div>

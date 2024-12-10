@@ -15,10 +15,14 @@
     <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script> -->
     <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="assets/css/argon-dashboard.css" rel="stylesheet" />
+
+
+    <link href="./assets/css/serendipity.css" rel="stylesheet" />
+    <link href="./assets/css/mobile.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
@@ -78,6 +82,13 @@
         @yield('content')
     </main>
     @endauth -->
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner-border text-primary" id="loader-contact" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
 
     <!--   Core JS Files   -->
     <script src="assets/js/core/popper.min.js"></script>

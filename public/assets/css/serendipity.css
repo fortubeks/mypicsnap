@@ -1,0 +1,280 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
+
+@font-face {
+    font-family: 'Serendipity';
+    src: url('../fonts/serendipityone-webfont.woff2') format('woff2');
+}
+
+/* just some defaults */
+body {
+    font-family: 'Open Sans', serif;
+    font-size: 14px;
+}
+
+.coverDateT2,
+.coverDateT2.serendipity {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 6px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: initial;
+    font-weight: normal;
+}
+
+
+
+.titleT2,
+.titleT2.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 41px;
+    line-height: 50px;
+    letter-spacing: 0px;
+    text-transform: initial;
+    font-variant: none;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+#mobileHeader {
+    min-height: 80px;
+    z-index: 500;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.titleT1,
+.titleT1.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 35px;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-transform: initial;
+    font-variant: none;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+.titleT2,
+.titleT2.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 41px;
+    line-height: 50px;
+    letter-spacing: 0px;
+    text-transform: initial;
+    font-variant: none;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+.titleT3,
+.titleT3.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 52px;
+    line-height: 62px;
+    letter-spacing: 0;
+    text-transform: initial;
+    font-variant: none;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+.titleT4,
+.titleT4.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 60px;
+    line-height: 45px;
+    letter-spacing: 2px;
+    text-transform: initial;
+    font-variant: none;
+    -webkit-font-smoothing: initial;
+    font-weight: normal;
+}
+
+.titleT5,
+.titleT5.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    text-transform: initial;
+    font-variant: none;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+.titleT6,
+.titleT6.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 38px;
+    line-height: 42px;
+    letter-spacing: initial;
+    text-transform: initial;
+    font-variant: none;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+.coverDateT1,
+.coverDateT1.serendipity {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+
+.coverDateT2,
+.coverDateT2.serendipity {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 6px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: initial;
+    font-weight: normal;
+}
+
+.coverDateT3,
+.coverDateT3.serendipity {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: initial;
+}
+
+.coverDateT4,
+.coverDateT4.serendipity {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: initial;
+}
+
+.coverDateT5,
+.coverDateT5.serendipity {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: initial;
+}
+
+.subhead,
+.subhead.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 34px;
+    line-height: 38px;
+    letter-spacing: 0;
+    text-transform: initial;
+    font-variant: none;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+}
+
+.subheadSmall,
+.subheadSmall.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 29px;
+    line-height: 35px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.subheadSmallT2,
+.subheadSmallT2.serendipity {
+    font-family: 'Serendipity', cursive;
+    font-size: 25px;
+    line-height: 28px;
+    letter-spacing: 0;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.subheadLarge,
+.subheadLarge.serendipity {
+    font-family: 'Serendipity', serif;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0;
+    text-transform: initial;
+    -webkit-font-smoothing: antialiased;
+}
+
+.navigation,
+.navigation.serendipity {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.serendipity {
+    font-family: 'Serendipity', cursive;
+}
+
+.titleT6.details {
+    font-size: 1em !important;
+}
+
+.coverDateT2 {
+    margin-bottom: 0;
+}
+
+.subheadSmall {
+    padding: 3px 0 5px 2px;
+}
+
+.name.subheadSmallT2 {
+    font-size: 1.2em !important;
+}
+
+#app-title-preview.serendipity {
+    font-size: 2em;
+    text-transform: initial;
+    line-height: 1.4;
+}
+
+#app-title-preview.serendipity span {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.35em;
+    line-height: 2;
+}
+
+.app-layout-1 #app-title-preview.serendipity,
+.app-layout-7 #app-title-preview.serendipity {
+    font-size: 3em;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.15;
+}
+
+.app-layout-1 #app-title-preview.serendipity span,
+.app-layout-7 #app-title-preview.serendipity span {
+    font-size: 0.25em;
+    line-height: 3;
+}
+
+.app-layout-5 #app-date-preview.serendipity .app-date-value-stack {
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.65em;
+    line-height: 1;
+}
+
+.serendipity-preview {
+    font-size: 22px !important;
+    line-height: 1.4;
+}
