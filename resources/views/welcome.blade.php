@@ -102,12 +102,13 @@
                             </div>
 
                             <div class="widget-content-title">
-                                <p>Look classy in any of the below colours</p>
-                                <p> <a href="{{asset('storage/cod.jpg')}}" data-lightbox="photos"><img class="img-fluid" loading="lazy" src="{{asset('storage/cod.jpg')}}"></a>
-                                </p>
+
                             </div>
                             <div class="widget-content">
                                 <div class="widget-content-text">
+                                    <p>Look classy in any of the below colours</p>
+                                    <p> <a href="{{asset('storage/cod.jpg')}}" data-lightbox="photos"><img class="img-fluid" loading="lazy" src="{{asset('storage/cod.jpg')}}"></a>
+                                    </p>
                                     <p></p>
                                     <p>We would love for our guests to join us in our celebration by dressing elegant and classy.</p>
                                     <p></p>
@@ -137,17 +138,22 @@
                     <img class="img-fluid" style="max-width: 100%;" src="{{asset('storage/cover-pic.jpg')}}">
                 </div>
                 <div class="card-body">
-                    <div class="title">
-                        Our Story
+
+                    <div class="widget-category-title subheadSmallT2 color_1_exact_bg color_1_exact_alt">
+                        <span><i class="fa fa-comment" aria-hidden="true"></i></span> Our Story
+                    </div>
+                    <div class="widget-content">
+                        <div class="widget-content-text">
+                            <p></p>
+                            <p>Favour and Fortune met by chance but quickly realized their meeting was destiny.
+                                Through laughter and shared dreams, their bond grew unbreakable.
+                                Fortune's steady heart matched Favour's radiant spirit, creating a love story of harmony and joy.
+                                Today, they invite you to celebrate the beginning of their forever together. ❤</p>
+                            <p></p>
+                            <p>We cant wait to see all the memories you help capture!</p>
+                        </div>
                     </div>
                     <div class="">
-                        <p>Favour and Fortune met by chance but quickly realized their meeting was destiny.
-                            Through laughter and shared dreams, their bond grew unbreakable.
-                            Fortune's steady heart matched Favour's radiant spirit, creating a love story of harmony and joy.
-                            Today, they invite you to celebrate the beginning of their forever together. ❤
-                        </p>
-
-                        <p>We cant wait to see all the memories you help capture!</p>
 
                         <!-- <p>Please scan the QR CODE with your smartphone's camera and upload your photo and video</p> -->
 

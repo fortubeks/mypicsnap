@@ -22,17 +22,22 @@
 
 <div class="fixed-plugin mx-auto">
     <div class="fixed-button">
-        <a class=" text-dark  px-2 py-2" href="{{route('gallery')}}">
-            <i class="fa fa-images py-2" aria-hidden="true"> </i>
-            Gallery
+        @if (Request::is('gallery'))
+        <a class="text-white px-2 py-2 btnbg" href="{{ route('home') }}">
+            <i class="fa fa-home py-2" aria-hidden="true"></i> Home
         </a>
+        @else
+        <a class="text-white px-2 py-2 btnbg" href="{{ route('gallery') }}">
+            <i class="fa fa-images py-2" aria-hidden="true"></i> Gallery
+        </a>
+        @endif
     </div>
     <div class="fixed-button">
-        <form id="upload-form" method="post" action="{{ route('upload') }}" enctype="multipart/form-data">
+        <form id="upload-form" method="post" action="{{ route('upload') }}" enctype="multipart/form-data" style="margin: 0;">
             @csrf
             <input type="file" name="images[]" id="file-input" multiple style="display: none;" />
             <input type="hidden" name="tag" id="tag" value="pre-wedding">
-            <label for="file-input" class="btn text-dark px-2 py-2">
+            <label for="file-input" class="btn text-white px-2 py-2 upload-button btnbg" style="margin: 0;">
                 <i class="fa fa-upload py-2" aria-hidden="true"></i> Upload
             </label>
         </form>
@@ -41,14 +46,70 @@
         </div>
     </div>
     <div class="fixed-button">
-        <a class=" text-dark  px-2 py-2">
+        <a class=" text-white  px-2 py-2 btnbg">
             <i class="fa fa-cog py-2" aria-hidden="true"> </i>
             More
         </a>
     </div>
 </div>
 
+<!-- Modal for entering guest name -->
+<div id="guestNameModal" style="display: none;">
+    <div style="background: #fff; padding: 20px; border-radius: 5px; width: 300px; margin: auto; position: fixed; top: 20%; left: 50%; transform: translate(-50%, -20%); z-index: 1000;">
+        <h5>Please enter your name:</h5>
+        <input type="text" id="guestNameInput" class="form-control mb-2" placeholder="Your Name" />
+        <button id="saveGuestName" class="btn btn-primary btn-sm">Save</button>
+    </div>
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999;" onclick="hideModal()"></div>
+</div>
+
 <script>
+    // Helper function to get a cookie
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+
+    // Helper function to set a cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        document.cookie = `${name}=${value};path=/;expires=${date.toUTCString()}`;
+    }
+
+    // Show modal
+    function showModal() {
+        document.getElementById('guestNameModal').style.display = 'block';
+    }
+
+    // Hide modal
+    function hideModal() {
+        document.getElementById('guestNameModal').style.display = 'none';
+    }
+
+    // Handle Upload Button Click
+    document.querySelector('.upload-button').addEventListener('click', function(event) {
+        const guestName = getCookie('guest_name');
+        if (!guestName) {
+            event.preventDefault(); // Stop the default file input click
+            showModal(); // Show modal to enter the name
+        }
+    });
+
+    // Handle Save Name Button Click
+    document.getElementById('saveGuestName').addEventListener('click', function() {
+        const guestName = document.getElementById('guestNameInput').value.trim();
+        if (guestName) {
+            setCookie('guest_name', guestName, 30); // Save the name in a cookie for 30 days
+            hideModal();
+            document.getElementById('file-input').click(); // Trigger file input click
+        } else {
+            alert('Please enter your name.');
+        }
+    });
+
     document.getElementById('file-input').addEventListener('change', function(event) {
         const files = event.target.files;
         if (files.length > 0) {

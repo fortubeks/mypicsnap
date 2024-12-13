@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{url('/img/apple-icon.png')}}">
+    <link rel="icon" type="image/png" href="{{url('/img/favicon.png')}}">
     <title>
         Our Wedding Gallery
     </title>
@@ -15,7 +15,7 @@
     <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
-    <!-- <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/b755aa5ef0.js" crossorigin="anonymous"></script>
     <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="assets/css/argon-dashboard.css" rel="stylesheet" />
@@ -32,7 +32,8 @@
         }
 
         .photo-gallery .item {
-            padding-bottom: 30px;
+            padding: 0px;
+            padding-bottom: 10px;
         }
     </style>
     <style>
@@ -65,6 +66,32 @@
         body {
             margin: 0;
             height: 100%;
+        }
+
+        .nav.nav-pills .nav-link {
+            color: #212529;
+        }
+
+        .nav.nav-pills {
+            background: #fff;
+            border-radius: 0.75rem;
+            position: relative;
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            color: #fff;
+            background-color: #800020;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #800020;
+        }
+
+        .btnbg {
+            color: #fff;
+            background-color: #800020;
         }
     </style>
 </head>
@@ -106,7 +133,7 @@
         window.addEventListener('load', function() {
             // JavaScript to hide the preloader and show the page content after assets are loaded
             document.getElementById('preloader').style.display = 'none';
-            document.getElementById('page_wrapper').style.visibility = 'visible';
+            //document.getElementById('page_wrapper').style.visibility = 'visible';
 
         });
     </script>
