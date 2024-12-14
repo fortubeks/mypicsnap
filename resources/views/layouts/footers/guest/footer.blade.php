@@ -27,7 +27,7 @@
             <i class="fa fa-home py-2" aria-hidden="true"></i> Home
         </a>
         @else
-        <a class="text-white px-2 py-2 btnbg" href="{{ route('gallery') }}">
+        <a class="text-white px-2 py-2 btnbg" href="{{ route('gallery', ['uid' => session('uidd')]) }}">
             <i class="fa fa-images py-2" aria-hidden="true"></i> Gallery
         </a>
         @endif
@@ -63,6 +63,21 @@
     <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999;" onclick="hideModal()"></div>
 </div>
 
+<div id="response-modal" class="modal" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close modal-close" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary modal-close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     // Helper function to get a cookie
     function getCookie(name) {
@@ -79,96 +94,110 @@
         document.cookie = `${name}=${value};path=/;expires=${date.toUTCString()}`;
     }
 
-    // Show modal
-    function showModal() {
-        document.getElementById('guestNameModal').style.display = 'block';
-    }
-
-    // Hide modal
-    function hideModal() {
-        document.getElementById('guestNameModal').style.display = 'none';
-    }
-
-    // Handle Upload Button Click
-    document.querySelector('.upload-button').addEventListener('click', function(event) {
-        const guestName = getCookie('guest_name');
-        if (!guestName) {
-            event.preventDefault(); // Stop the default file input click
-            showModal(); // Show modal to enter the name
-        }
-    });
-
-    // Handle Save Name Button Click
-    document.getElementById('saveGuestName').addEventListener('click', function() {
-        const guestName = document.getElementById('guestNameInput').value.trim();
-        if (guestName) {
-            setCookie('guest_name', guestName, 30); // Save the name in a cookie for 30 days
-            hideModal();
-            document.getElementById('file-input').click(); // Trigger file input click
-        } else {
-            alert('Please enter your name.');
-        }
-    });
-
-    document.getElementById('file-input').addEventListener('change', function(event) {
-        const files = event.target.files;
-        if (files.length > 0) {
-            uploadFiles(files);
-        }
-    });
-
-    function uploadFiles(files) {
-        const formData = new FormData();
-        const progressBar = document.querySelector('.progress');
-        const progress = document.getElementById('upload-progress');
-
-        // Append files to the formData
-        for (let i = 0; i < files.length; i++) {
-            formData.append('images[]', files[i]);
+    window.addEventListener('load', function() {
+        // Show modal
+        function showModal() {
+            $('#guestNameModal').fadeIn();
         }
 
-        // Show progress bar
-        progressBar.style.display = 'block';
-        progress.style.width = '0%';
+        // Hide modal
+        function hideModal() {
+            $('#guestNameModal').fadeOut();
+        }
 
-        // Make an AJAX request
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', "{{ route('upload') }}", true);
-
-        // Add CSRF token to the request header
-        xhr.setRequestHeader('X-CSRF-TOKEN', '{{ csrf_token() }}');
-
-        // Track upload progress
-        xhr.upload.addEventListener('progress', function(e) {
-            if (e.lengthComputable) {
-                const percentComplete = Math.round((e.loaded / e.total) * 100);
-                progress.style.width = percentComplete + '%';
-                progress.setAttribute('aria-valuenow', percentComplete);
-                progress.innerHTML = percentComplete + '%';
+        // Handle Upload Button Click
+        $('.upload-button').on('click', function(event) {
+            const guestName = getCookie('guest_name');
+            if (!guestName) {
+                event.preventDefault(); // Stop the default file input click
+                showModal(); // Show modal to enter the name
             }
         });
 
-        // Handle response
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                alert('Upload Successful!');
-                window.location.reload();
+        // Handle Save Name Button Click
+        $('#saveGuestName').on('click', function() {
+            const guestName = $('#guestNameInput').val().trim();
+            if (guestName) {
+                setCookie('guest_name', guestName, 30); // Save the name in a cookie for 30 days
+                hideModal();
+                $('#file-input').trigger('click'); // Trigger file input click
             } else {
-                alert('Error occurred during upload.');
+                alert('Please enter your name.');
             }
-            // Reset progress bar
-            progressBar.style.display = 'none';
-            progress.style.width = '0%';
-            progress.innerHTML = '';
-        };
+        });
 
-        // Handle errors
-        xhr.onerror = function() {
-            alert('Upload failed.');
-            progressBar.style.display = 'none';
-        };
+        $('#file-input').on('change', function() {
+            const files = this.files;
+            if (files.length > 0) {
+                uploadFiles(files);
+            }
+        });
 
-        // Send form data
-        xhr.send(formData);
-    }
+        // Close the modal when needed
+        $('.modal-close').on('click', function() {
+            const modal = $('#response-modal');
+            modal.removeClass('show').fadeOut();
+        });
+
+        function uploadFiles(files) {
+            const formData = new FormData();
+            const $progressBar = $('.progress');
+            const $progress = $('#upload-progress');
+
+            // Append files to the formData
+            for (let i = 0; i < files.length; i++) {
+                formData.append('images[]', files[i]);
+            }
+
+            // Get the value of the 'tag' input field
+            const tagValue = $('#tag').val();
+            formData.append('tag', tagValue); // Add the tag value to the request
+
+            // Show progress bar
+            $progressBar.show();
+            $progress.css('width', '0%');
+
+            // Make an AJAX request
+            $.ajax({
+                url: "{{ route('upload') }}",
+                type: "POST",
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                data: formData,
+                processData: false,
+                contentType: false,
+                xhr: function() {
+                    const xhr = new window.XMLHttpRequest();
+                    // Track upload progress
+                    xhr.upload.addEventListener('progress', function(e) {
+                        if (e.lengthComputable) {
+                            const percentComplete = Math.round((e.loaded / e.total) * 100);
+                            $progress.css('width', percentComplete + '%')
+                                .attr('aria-valuenow', percentComplete)
+                                .text(percentComplete + '%');
+                        }
+                    });
+                    return xhr;
+                },
+                success: function() {
+                    const modal = $('#response-modal');
+                    modal.find('.modal-title').text('Upload Successful');
+                    modal.find('.modal-body').html('Your files have been uploaded successfully!');
+                    modal.addClass('show').fadeIn();
+                },
+                error: function() {
+                    const modal = $('#response-modal');
+                    modal.find('.modal-title').text('Upload Failed');
+                    modal.find('.modal-body').html('An error occurred during the upload. Please try again.');
+                    modal.addClass('show').fadeIn();
+                },
+                complete: function() {
+                    // Reset progress bar
+                    $progressBar.hide();
+                    $progress.css('width', '0%').text('');
+                }
+            });
+        }
+    });
 </script>

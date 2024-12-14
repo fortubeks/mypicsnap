@@ -12,17 +12,17 @@
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <!-- Nucleo Icons -->
-    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="{{url('assets/css/nucleo-icons.css')}}" rel="stylesheet" />
+    <link href="{{url('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/b755aa5ef0.js" crossorigin="anonymous"></script>
-    <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="{{url('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- CSS Files -->
-    <link id="pagestyle" href="assets/css/argon-dashboard.css" rel="stylesheet" />
+    <link id="pagestyle" href="{{url('assets/css/argon-dashboard.css')}}" rel="stylesheet" />
 
 
-    <link href="./assets/css/serendipity.css" rel="stylesheet" />
-    <link href="./assets/css/mobile.css" rel="stylesheet" />
+    <link href="{{url('assets/css/serendipity.css')}}" rel="stylesheet" />
+    <link href="{{url('assets/css/mobile.css')}}" rel="stylesheet" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
@@ -118,10 +118,10 @@
     </div>
 
     <!--   Core JS Files   -->
-    <script src="assets/js/core/popper.min.js"></script>
+    <script src="{{url('assets/js/core/popper.min.js')}}"></script>
     <!-- <script src="assets/js/core/bootstrap.min.js"></script> -->
-    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="{{url('assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
+    <script src="{{url('assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>

@@ -14,10 +14,11 @@ class ImageController extends Controller
     public function upload(Request $request)
     {
         $request->validate([
-            'images.*' => 'required|image|max:5120', // Validate each file as an image and limit size to 5MB
+            'images.*' => 'required|image', // Validate each file as an image and limit size to 5MB
         ]);
 
         $uploadedFiles = [];
+        logger($request->all());
         $tag = $request->input('tag', 'ceremony');
         try {
             if ($request->hasFile('images')) {

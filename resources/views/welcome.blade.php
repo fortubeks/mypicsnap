@@ -13,7 +13,7 @@
             </div>
 
 
-            <div class="appy-row padding-7-t">
+            <div class="appy-row padding-20-t">
                 <div class="center-block width-3">
                     <div class="event-date-circle color_1_exact_bg color_1_exact_alt dropdown">
                         <div class="event-date-circle-content dropdown-toggle" style="cursor: pointer;" data-toggle="dropdown" aria-expanded="false">
@@ -38,9 +38,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="subheadLarge padding-7-t center-text subevent-name">Ceremony and Reception</div>
+                <div class="subheadLarge padding-20-t center-text subevent-name">Ceremony and Reception</div>
                 <!-- EVENT DATE/TIME INFOS -->
-                <div class="center-block width-4 padding-7-t">
+                <div class="center-block width-4 padding-20-t">
                     <div class="events-time">
                         <i class="icon-clock icons"></i>
                         <span class="events-time-stamp font-bolder">
@@ -62,74 +62,76 @@
                     </div>
                 </div>
                 <!-- END EVENT -->
-                <div class="widget-container padding-7-t">
-                    <div class="event-widget-container active" data-key="590306">
 
-
-                        <div id="block-2" class="appy-widget draggable-item widget widget-base legacy legacy-widget-note" data-key="2" data-type="BASE" data-id="4020125">
-                            <a name="block-4020125"></a>
-                            <div class="widget-category-title subheadSmallT2 color_1_exact_bg color_1_exact_alt">
-                                <span><i class="fa fa-location-arrow" aria-hidden="true"></i></span> Directions &amp; Map
-                            </div>
-
-                            <div class="widget-content">
-                                <div class="map">
-                                    <iframe width="100%" height="300" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15903.384270694165!2d7.0395734!3d4.7964631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cc42ab6baa63%3A0x613ba108b45ab71a!2sSpring%20Gardens!5e0!3m2!1sen!2sng!4v1733852694155!5m2!1sen!2sng" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
-                                <div class="widget-link">
-                                    <p><a href="https://www.google.com/maps/place/211+N+Tampa+St+%2C+Tampa%2C+FL+33602+US+/" class="widget-link-icon" target="_blank">www.google.com</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="block-0" class="appy-widget draggable-item widget widget-base legacy legacy-widget-note" data-key="0" data-type="BASE" data-id="4108942">
-                            <a name="block-4108942"></a>
-                            <div class="widget-category-title subheadSmallT2 color_1_exact_bg color_1_exact_alt">
-                                <span><i class="fa fa-comment" aria-hidden="true"></i></span> RSVP Note
-                            </div>
-
-                            <div class="widget-content">
-                                <div class="widget-content-text">
-                                    <p></p>
-                                    <p>Ladies and Gentlemen, thank you for completing your RSVP in a timely manner. We have closed our reservations. We look forward to celebrating with you soon!&nbsp;&nbsp;</p>
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="block-3" class="appy-widget draggable-item widget widget-base legacy legacy-widget-note" data-key="3" data-type="BASE" data-id="4020127">
-                            <a name="block-4020127"></a>
-                            <div class="widget-category-title subheadSmallT2 color_1_exact_bg color_1_exact_alt">
-                                <span><i class="fa fa-black-tie" aria-hidden="true"></i></span> Dress Code
-                            </div>
-
-                            <div class="widget-content-title">
-
-                            </div>
-                            <div class="widget-content">
-                                <div class="widget-content-text">
-                                    <p>Look classy in any of the below colours</p>
-                                    <p> <a href="{{asset('storage/cod.jpg')}}" data-lightbox="photos"><img class="img-fluid" loading="lazy" src="{{asset('storage/cod.jpg')}}"></a>
-                                    </p>
-                                    <p></p>
-                                    <p>We would love for our guests to join us in our celebration by dressing elegant and classy.</p>
-                                    <p></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
             </div>
-
-            <!-- <div class="mobile-next-section-btn btn_color_2_dark ">
-                <a href="/wedding/meettheoyes/eventsdetail/?e=603301">
-                    <span><i class="icon-arrow-right icons"></i></span>
-                </a>
-            </div> -->
         </div>
     </main>
+
+    <div id="block-0" class="appy-widget draggable-item widget widget-base legacy legacy-widget-note widget-container padding-20-t" data-key="0" data-type="BASE" data-id="4108942">
+        <a name="block-4020125"></a>
+        <div class="widget-category-title subheadSmallT2 color_1_exact_bg color_1_exact_alt">
+            <span><i class="fa fa-location-arrow" aria-hidden="true"></i></span> Directions &amp; Map
+        </div>
+
+        <div class="widget-content">
+            <div class="map">
+                <iframe width="100%" height="300" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15903.384270694165!2d7.0395734!3d4.7964631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cc42ab6baa63%3A0x613ba108b45ab71a!2sSpring%20Gardens!5e0!3m2!1sen!2sng!4v1733852694155!5m2!1sen!2sng" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="widget-link">
+            </div>
+        </div>
+    </div>
+    <div id="block-0" class="appy-widget draggable-item widget widget-base legacy legacy-widget-note widget-container padding-20-t" data-key="0" data-type="BASE" data-id="4108942">
+        <a name="block-4108942"></a>
+        <div class="widget-category-title subheadSmallT2 color_1_exact_bg color_1_exact_alt">
+            <span><i class="fa fa-comment" aria-hidden="true"></i></span> RSVP Note
+        </div>
+
+        <div class="widget-content">
+            <div class="widget-content-text">
+                <p></p>
+                <p>Ladies and Gentlemen, thank you for completing your RSVP in a timely manner. We have closed our reservations. We look forward to celebrating with you soon!&nbsp;&nbsp;</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="padding-20-t">
+        <a href="{{asset('storage/home3.jpg')}}" data-lightbox="photos"><img class="img-fluid" loading="lazy" src="{{asset('storage/home3.jpg')}}"></a>
+    </div>
+    <div id="block-3" class="appy-widget draggable-item widget widget-base legacy legacy-widget-note widget-container padding-20-t" data-key="3" data-type="BASE" data-id="4020127">
+        <a name="block-4020127"></a>
+        <div class="widget-category-title subheadSmallT2 color_1_exact_bg color_1_exact_alt">
+            <span><i class="fa fa-black-tie" aria-hidden="true"></i></span> Dress Code
+        </div>
+        <div class="widget-content">
+            <div class="widget-content-text">
+                <p>Look classy in any of the below colours</p>
+                <p> <a href="{{asset('storage/cod.png')}}" data-lightbox="photos"><img class="img-fluid" loading="lazy" src="{{asset('storage/cod.png')}}"></a>
+                </p>
+                <p></p>
+                <p>We would love for our guests to join us in our celebration by dressing elegant and classy.</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div id="block-0" class="appy-widget draggable-item widget widget-base legacy legacy-widget-note widget-container padding-20-t" data-key="0" data-type="BASE" data-id="4108942">
+        <a name="block-4108942"></a>
+        <div class="widget-category-title subheadSmallT2 color_1_exact_bg color_1_exact_alt">
+            <span><i class="fa fa-comment" aria-hidden="true"></i></span> As Seen On
+        </div>
+
+        <div class="widget-content">
+            <div class="widget-content-text">
+                <p></p>
+                <p><a href="{{asset('storage/ff24-newspaper.jpg')}}" data-lightbox="photos"><img class="img-fluid" loading="lazy" src="{{asset('storage/ff24-newspaper.jpg')}}"></a>;</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
     <div>
-        <img style="max-width: 100%;" src="">
-        <a href="{{asset('storage/ff24-newspaper.jpg')}}" data-lightbox="photos"><img class="img-fluid" loading="lazy" src="{{asset('storage/ff24-newspaper.jpg')}}"></a>
+
+
     </div>
     <div class="row">
         <div class="col-md-8 mx-auto">
@@ -145,10 +147,10 @@
                     <div class="widget-content">
                         <div class="widget-content-text">
                             <p></p>
-                            <p>Favour and Fortune met by chance but quickly realized their meeting was destiny.
-                                Through laughter and shared dreams, their bond grew unbreakable.
+                            <p>We met by chance but quickly realized our meeting was destiny.
+                                Through laughter and shared dreams, our bond grew unbreakable.
                                 Fortune's steady heart matched Favour's radiant spirit, creating a love story of harmony and joy.
-                                Today, they invite you to celebrate the beginning of their forever together. ❤</p>
+                                Today, we invite you to celebrate the beginning of our forever together. ❤</p>
                             <p></p>
                             <p>We cant wait to see all the memories you help capture!</p>
                         </div>

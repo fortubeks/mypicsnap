@@ -5,10 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Models\Guest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class EventController extends Controller
 {
-    public function index() {}
+    public function index($eventId)
+    {
+        $userId = Cookie::get('user_id');
+        $guest = Guest::where('uuid', $userId)->first();
+        if ($guest) {
+            $guest->update(['event_id', $eventId]);
+        }
+        return view('welcome');
+    }
 
     public function show($id) {}
 

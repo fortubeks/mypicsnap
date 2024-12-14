@@ -17,6 +17,7 @@ class EventSeeder extends Seeder
     {
         Event::create([
             'user_id' => 1,
+            'uid' => uniqid(),
             'event_date' => now(),
             'name' => 'FF Wedding',
             'event_type' => 'App/Model/WeddingEvent',
