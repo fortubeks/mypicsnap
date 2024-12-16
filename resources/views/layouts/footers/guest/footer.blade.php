@@ -185,6 +185,10 @@
                     modal.find('.modal-title').text('Upload Successful');
                     modal.find('.modal-body').html('Your files have been uploaded successfully!');
                     modal.addClass('show').fadeIn();
+
+                    modal.on('hidden.bs.modal', function() {
+                        location.reload(); // Refresh the page
+                    });
                 },
                 error: function() {
                     const modal = $('#response-modal');
