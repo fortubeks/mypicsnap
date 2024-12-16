@@ -90,7 +90,7 @@
         <div class="widget-content">
             <div class="widget-content-text">
                 <p></p>
-                <p>Ladies and Gentlemen, thank you for completing your RSVP in a timely manner. We have closed our reservations. We look forward to celebrating with you soon!&nbsp;&nbsp;</p>
+                <p>Ladies and Gentlemen, thank you for completing your RSVP in a timely manner. We have closed our reservations. We look forward to celebrating with you soon!</p>
                 <p></p>
             </div>
         </div>
