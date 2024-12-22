@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{url('/img/apple-icon.png')}}">
     <link rel="icon" type="image/png" href="{{url('/img/favicon.png')}}">
     <title>
-        Our Wedding Gallery
+        Favour & Fortune's Wedding
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />

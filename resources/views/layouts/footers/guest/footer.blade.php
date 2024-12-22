@@ -22,8 +22,8 @@
 
 <div class="fixed-plugin mx-auto">
     <div class="fixed-button">
-        @if (Request::is('gallery'))
-        <a class="text-white px-2 py-2 btnbg" href="{{ route('home') }}">
+        @if (Route::currentRouteName() === 'gallery')
+        <a class="text-white px-2 py-2 btnbg" href="{{ route('home', ['uid' => session('uidd')]) }}">
             <i class="fa fa-home py-2" aria-hidden="true"></i> Home
         </a>
         @else
